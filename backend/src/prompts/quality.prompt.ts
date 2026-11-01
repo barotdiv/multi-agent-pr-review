@@ -10,4 +10,4 @@ CORE SCOPE:
 
 OUTPUT FORMAT:
 Output strictly valid JSON matching the unified agent schema.
-If clean, return: {"summary": "Code quality adheres to standards", "findings": []`
+If clean, return: {"summary": "Code quality adheres to standards", "findings": []}`

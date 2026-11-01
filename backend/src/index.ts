@@ -5,6 +5,7 @@ import { config } from "./config/env.js"
 import { connectDB } from "./config/db.js"
 import reviewRoutes from "./routes/review.routes.js"
 import healthRoutes from "./routes/health.routes.js"
+import { errorHandler } from "./middlewares/error.middleware.js"
 
 const app = express()
 
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use("/api", healthRoutes)
 app.use("/api", diffRoutes)
 app.use("/api", reviewRoutes)
+app.use(errorHandler)
 
 app.get("/", (_req: Request, res: Response) => {
     res.json({
